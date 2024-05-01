@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 
 import authRoutes from "./routes/auth.routes.js"
 import messageRoutes from "./routes/message.routes.js"
+import userRoutes from "./routes/user.routes.js"
 
 import connectMongoDB from "./db/connectMongoDB.js"
 
@@ -20,6 +21,7 @@ app.use(cookieParser());
 //routes
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
+app.use("/api/users", userRoutes);
 
 app.get("/", (req,res) => {
     // root route
